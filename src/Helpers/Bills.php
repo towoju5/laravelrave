@@ -35,7 +35,6 @@ class Bills
      */
     public function initiate(array $data)
     {
-        return $data;
         $bill = Http::withToken($this->secretKey)->post(
             $this->baseUrl . '/bills',
             $data
